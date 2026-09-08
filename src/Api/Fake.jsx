@@ -30,6 +30,11 @@ const Fake = () => {
         }
     }
 
+    // useEffect(()=>{
+    //     fetchData();
+    // },[]);
+    
+
     return (
         <div>Fake Api
             <button onClick={fetchData}>Fetch-Data</button>

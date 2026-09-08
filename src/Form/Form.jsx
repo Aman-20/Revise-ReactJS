@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { toast } from 'react-toastify';
 
 const Form = () => {
     const [data, setdata] = useState({
@@ -13,9 +14,13 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(data);
+
+        if(!name.trim() || !email.trim()){
+            toast.error("data is required");
+            return;
+        }
         setdata({name:"",email:""});
-        alert(`your form have been submitted ${data.name}!!`);
+        toast.warn(`your form have been submitted ${data.name}!!`);
     }
 
     return (

@@ -8,6 +8,7 @@ const Navbar = () => {
         <Link to={'/course'}>course</Link>
         <Link to={'/form'}>Form</Link>
         <Link to={'/fake'}>Fake-Api</Link>
+        <Link to="/section">Section</Link>
     </div>
   )
 }
