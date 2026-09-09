@@ -15,12 +15,12 @@ const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if(!name.trim() || !email.trim()){
+        if(!data.name.trim() || !data.email.trim()){
             toast.error("data is required");
             return;
         }
         setdata({name:"",email:""});
-        toast.warn(`your form have been submitted ${data.name}!!`);
+        toast.success(`your form have been submitted ${data.name}!!`);
     }
 
     return (
